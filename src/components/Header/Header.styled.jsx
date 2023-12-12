@@ -5,6 +5,14 @@ export const Wrapper = styled.div`
   justify-content: space-between;
   padding: 0 16px;
   margin-bottom: 13px;
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tab}) {
+    padding: 0 32px;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}) {
+    padding: 0 60px;
+  }
 `;
 
 export const LogoWrap = styled.div`

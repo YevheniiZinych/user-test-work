@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import mobImg from "../../img/back-mob.jpg";
+import tabImg from "../../img/back-tab.jpg";
+import deskImg from "../../img/back-desc.jpg";
 
 export const Container = styled.div`
   width: 360px;
@@ -8,6 +10,11 @@ export const Container = styled.div`
   border: 1px solid red;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoints.tab}) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}) {
+    width: 1024px;
   }
 `;
 
@@ -30,6 +37,15 @@ export const HeroWrap = styled.div`
   background-size: cover;
   background-position: center;
 
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.tab}) {
+    background-image: url(${tabImg});
+  }
+
+  @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}) {
+    background-image: url(${deskImg});
+    height: 650px;
+  }
+
   & h1 {
     width: 328px;
     height: auto;
@@ -43,6 +59,14 @@ export const HeroWrap = styled.div`
 
     margin-top: 40px;
     margin-bottom: 21px;
+
+    @media screen and (min-width: ${({ theme }) => theme.breakpoints.tab}) {
+      width: 380px;
+    }
+
+    @media screen and (min-width: ${({ theme }) => theme.breakpoints.desk}) {
+      width: 380px;
+    }
   }
 
   & p {
@@ -53,6 +77,10 @@ export const HeroWrap = styled.div`
     margin-bottom: 32px;
 
     color: #ffffff;
+
+    @media screen and (min-width: ${({ theme }) => theme.breakpoints.tab}) {
+      width: 380px;
+    }
   }
 
   & button {
