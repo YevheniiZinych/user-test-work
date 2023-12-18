@@ -1,5 +1,8 @@
 import { Container, HeroWrap, HeroSection } from "./MainPage.styled";
 import { Header } from "../../components/Header/Header";
+import { Users } from "../../components/Users/Users";
+import { SignUp } from "../../components/SignUp/SignUp";
+
 export const MainPage = () => {
   return (
     <Container>
@@ -18,7 +21,12 @@ export const MainPage = () => {
             <button type="button">Sign up</button>
           </HeroWrap>
         </HeroSection>
-        <section></section>
+        <section>
+          <Users />
+        </section>
+        <section>
+          <SignUp />
+        </section>
       </main>
     </Container>
   );
